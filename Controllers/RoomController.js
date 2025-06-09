@@ -110,6 +110,8 @@ const roomAssignment = async (req, res) => {
       .json({ message: "Room assigned and Mail is Sended ", newAssignment });
 
     // Send mail
+    
+
     await mailer.sendMail({
       from: process.env.SMTP_USER,
       to: resident.email,
